@@ -182,12 +182,12 @@ def main():
         #Add file uploader to allow users to upload photos
         image_file = st.file_uploader("", type=['jpg','png','jpeg'])
         if image_file is not None:
-            with open(os.path.join("streamlit_app_gallery-main/static","1.jpg"),"wb") as f: 
+            with open(os.path.join("./streamlit_app_gallery-main/static","1.jpg"),"wb") as f: 
                 f.write(image_file.getbuffer())         
             st.success("File Uploaded")
             
             # image = Image.open(uploaded_file)
-            percentage,result=model(glob.glob('streamlit_app_gallery-main/static/*.JPG'))
+            percentage,result=model(glob.glob('./streamlit_app_gallery-main/static/*.JPG'))
 
             col1, col2 = st.columns( [0.5, 0.5])
             with col1:
