@@ -105,7 +105,7 @@ def send_email(usermail):
     smtp_port = 587
     smtp_username = 'ishitagupta19@gnu.ac.in'
     smtp_password = 'ddtyoohrsnrcexoh'
-    file_paths =glob.glob('dashboard/*.html')
+    file_paths =glob.glob('streamlit_app_gallery-main/dashboard/*.html')
     msg = MIMEMultipart()
     msg['From'] = from_addr
     msg['To'] = COMMASPACE.join([to_addr])
@@ -284,7 +284,7 @@ def main():
         st.altair_chart(bar_chart, use_container_width=True)
 
         # Export the chart as a PNG file
-        filename = f"dashboard/{city}_{'_'.join(area)}.html"
+        filename = f"streamlit_app_gallery-main/dashboard/{city}_{'_'.join(area)}.html"
         bar_chart.save(filename)
         st.write(f"Chart saved as {filename}")
     
