@@ -1,6 +1,4 @@
-ffmpeg 
-libsm6 
-libxext6
+libgl1
 cachelib==0.10.0
 cachetools==5.2.0
 certifi==2022.9.24
