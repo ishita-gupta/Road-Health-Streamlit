@@ -204,8 +204,8 @@ def main():
             col1, col2 = st.columns( [0.5, 0.5])
             with col1:
                 st.markdown('<p style="text-align: center;">Image Uploaded</p>',unsafe_allow_html=True)
-                st.image(glob.glob('streamlit_app_gallery-main/static/*.JPG'),width=300)
-                input_image = glob.glob('streamlit_app_gallery-main/static/*.JPG')
+                st.image(glob.glob('streamlit_app_gallery-main/static/*.jpg'),width=300)
+                input_image = glob.glob('streamlit_app_gallery-main/static/*.jpg')
 
             with col2:
                 st.markdown('<p style="text-align: center;">Pot Hole Detection Results</p>',unsafe_allow_html=True)
