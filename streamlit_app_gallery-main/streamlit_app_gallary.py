@@ -133,8 +133,8 @@ def send_email(usermail):
 def main():
 
     #Add a logo (optional) in the sidebar
-    logo = Image.open(r'C:/Users/admin/Downloads/road health/My Dataset/test/Pothole/1.jpg')
-    profile = Image.open(r'C:/Users/admin/Downloads/road health/My Dataset/test/Pothole/2.jpg')
+    logo = Image.open(r'streamlit_app_gallery-main/assets/1.jpg')
+    profile = Image.open(r'streamlit_app_gallery-main/assets/2.jpg')
 
     st.markdown("""
         <style>
@@ -158,8 +158,8 @@ def main():
         )
 
 
-    logo = Image.open(r'C:/Users/admin/Downloads/road health/My Dataset/test/Pothole/1.jpg')
-    profile = Image.open(r'C:/Users/admin/Downloads/road health/My Dataset/test/Pothole/2.jpg')
+    logo = Image.open(r'streamlit_app_gallery-main/assets/1.jpg')
+    profile = Image.open(r'streamlit_app_gallery-main/assets/2.jpg')
 
     if choose == "Report A Pot Hole":
         col1, col2 = st.columns( [0.8, 0.2])
