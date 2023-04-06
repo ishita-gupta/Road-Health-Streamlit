@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"data": {"name": "data-60b2f454a29a26a0c3c36c295b240e3b"}, "mark": "bar", "encoding": {"color": {"field": "area", "type": "nominal"}, "x": {"field": "area", "type": "nominal"}, "y": {"aggregate": "count", "axis": {"title": "Number Of Pot-Holes"}, "type": "quantitative"}}, "height": 400, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-60b2f454a29a26a0c3c36c295b240e3b": [{"area": "chandkheda", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 84.03, "image": "[[125 130 126]\r\n [123 128 124]\r\n [124 129 125]\r\n ...\r\n [142 142 140]\r\n [147 147 145]\r\n [151 151 149]]"}, {"area": "chandkheda", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 61.62, "image": "[[214 218 230]\r\n [216 220 232]\r\n [216 220 232]\r\n ...\r\n [ 50  49  45]\r\n [ 55  54  50]\r\n [ 66  65  61]]"}, {"area": "chandkheda", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 95.73, "image": "[[255 255 255]\r\n [255 255 255]\r\n [255 255 255]\r\n ...\r\n [114 109 105]\r\n [114 109 105]\r\n [132 127 123]]"}, {"area": "chandkheda", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 96.33, "image": "[[128 126 129]\r\n [130 128 131]\r\n [124 124 124]\r\n ...\r\n [105  95  93]\r\n [116 104 104]\r\n [110  98  98]]"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

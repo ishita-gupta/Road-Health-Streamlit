@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"data": {"name": "data-3c180df5e0d670aae010f2db0d53cf48"}, "mark": "bar", "encoding": {"color": {"field": "area", "type": "nominal"}, "x": {"field": "area", "type": "nominal"}, "y": {"aggregate": "count", "axis": {"title": "Number Of Pot-Holes"}, "type": "quantitative"}}, "height": 400, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-3c180df5e0d670aae010f2db0d53cf48": [{"area": "amoda", "zipcode": 394380, "city": "surat", "state": "Gujarat", "percentage": 90.45, "image": "[[105 130 147]\r\n [112 137 154]\r\n [123 148 162]\r\n ...\r\n [158 158 158]\r\n [156 156 156]\r\n [154 154 154]]"}, {"area": "amoda", "zipcode": 394380, "city": "surat", "state": "Gujarat", "percentage": 87.78, "image": "[[231 219 221]\r\n [233 221 223]\r\n [235 223 225]\r\n ...\r\n [ 88  87  92]\r\n [117 118 122]\r\n [125 126 130]]"}, {"area": "amoda", "zipcode": 394380, "city": "surat", "state": "Gujarat", "percentage": 99.95, "image": "[[73 67 67]\r\n [75 69 69]\r\n [76 70 70]\r\n ...\r\n [33 29 28]\r\n [30 26 25]\r\n [34 30 29]]"}, {"area": "amoda", "zipcode": 394380, "city": "surat", "state": "Gujarat", "percentage": 87.24, "image": "[[220 207 190]\r\n [218 205 188]\r\n [233 220 203]\r\n ...\r\n [ 99  91  88]\r\n [ 83  75  72]\r\n [ 77  69  66]]"}, {"area": "amoda", "zipcode": 394380, "city": "surat", "state": "Gujarat", "percentage": 97.22, "image": "[[135 139 142]\r\n [141 145 148]\r\n [138 142 145]\r\n ...\r\n [106 110 113]\r\n [ 90  94  97]\r\n [ 99 103 106]]"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

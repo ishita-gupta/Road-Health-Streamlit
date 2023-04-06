@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"data": {"name": "data-1b7f380b3dbd4c84033104bb47916bcc"}, "mark": "bar", "encoding": {"color": {"field": "area", "type": "nominal"}, "x": {"field": "area", "type": "nominal"}, "y": {"aggregate": "count", "axis": {"title": "Number Of Pot-Holes"}, "type": "quantitative"}}, "height": 400, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-1b7f380b3dbd4c84033104bb47916bcc": [{"area": "chandkheda", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 84.03, "image": "[[125 130 126]\r\n [123 128 124]\r\n [124 129 125]\r\n ...\r\n [142 142 140]\r\n [147 147 145]\r\n [151 151 149]]"}, {"area": "chandkheda", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 61.62, "image": "[[214 218 230]\r\n [216 220 232]\r\n [216 220 232]\r\n ...\r\n [ 50  49  45]\r\n [ 55  54  50]\r\n [ 66  65  61]]"}, {"area": "chandkheda", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 95.73, "image": "[[255 255 255]\r\n [255 255 255]\r\n [255 255 255]\r\n ...\r\n [114 109 105]\r\n [114 109 105]\r\n [132 127 123]]"}, {"area": "chandkheda", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 96.33, "image": "[[128 126 129]\r\n [130 128 131]\r\n [124 124 124]\r\n ...\r\n [105  95  93]\r\n [116 104 104]\r\n [110  98  98]]"}, {"area": "bhat", "zipcode": 382424, "city": "ahmedabad", "state": "Gujarat", "percentage": 96.33, "image": "[[128 126 129]\r\n [130 128 131]\r\n [124 124 124]\r\n ...\r\n [105  95  93]\r\n [116 104 104]\r\n [110  98  98]]"}, {"area": "bhat", "zipcode": 382210, "city": "ahmedabad", "state": "Gujarat", "percentage": 96.33, "image": "[[128 126 129]\r\n [130 128 131]\r\n [124 124 124]\r\n ...\r\n [105  95  93]\r\n [116 104 104]\r\n [110  98  98]]"}, {"area": "bhat", "zipcode": 382210, "city": "ahmedabad", "state": "Gujarat", "percentage": 89.81, "image": "[[130 130 128]\r\n [136 137 132]\r\n [144 143 138]\r\n ...\r\n [ 61  63  62]\r\n [ 57  57  57]\r\n [ 51  51  51]]"}, {"area": "bhat", "zipcode": 382210, "city": "ahmedabad", "state": "Gujarat", "percentage": 88.58, "image": "[[ 77 125  16]\r\n [ 78 126  17]\r\n [ 75 123  14]\r\n ...\r\n [165 169 172]\r\n [169 173 176]\r\n [161 165 168]]"}, {"area": "bhat", "zipcode": 382210, "city": "ahmedabad", "state": "Gujarat", "percentage": 100.0, "image": "[[243 242 247]\r\n [239 238 243]\r\n [209 208 213]\r\n ...\r\n [ 24  24  24]\r\n [ 49  45  44]\r\n [152 148 147]]"}, {"area": "bhat", "zipcode": 382210, "city": "ahmedabad", "state": "Gujarat", "percentage": 85.38, "image": "[[159 149 139]\r\n [151 141 131]\r\n [157 147 137]\r\n ...\r\n [114 111 102]\r\n [107 104  97]\r\n [ 94  91  84]]"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
