@@ -228,7 +228,7 @@ def main():
                     #             writer_object = writer(f_object)
                     #             writer_object.writerow(row)
                     #             f_object.close()
-                    with open('streamlit_app_gallery-main/test.csv', 'a') as f_object:
+                    with open('https://github.com/ishita-gupta/Road-Health-Streamlit/blob/main/streamlit_app_gallery-main/test.csv', 'a') as f_object:
                                 writer_object = writer(f_object)
                                 writer_object.writerow(row)
                                 f_object.close()
