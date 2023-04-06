@@ -228,7 +228,7 @@ def main():
                     #             writer_object = writer(f_object)
                     #             writer_object.writerow(row)
                     #             f_object.close()
-                    with open('test.csv', 'a') as f_object:
+                    with open('streamlit_app_gallery-main/test.csv', 'a') as f_object:
                                 writer_object = writer(f_object)
                                 writer_object.writerow(row)
                                 f_object.close()
@@ -248,7 +248,7 @@ def main():
         with col2:               # To display brand logo
 
             st.image(logo, width=130 )
-        df=pd.read_csv("test.csv")
+        df=pd.read_csv("streamlit_app_gallery-main/test.csv")
         # city_counts=df['city'].value_counts()
         # city_names=city_counts.index.tolist()
         # city_counts=city_counts.tolist()
