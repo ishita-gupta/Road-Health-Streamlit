@@ -46,7 +46,7 @@ def login():
         else:
             st.error("Incorrect username or password")
     
-    st.image("assets/maingif.gif",width=700)
+    st.image("streamlit_app_gallery-main/assets/maingif.gif",width=700)
 def model(image):
     global im, result, percentage , imageName , solution, size
     # OG size = 300
