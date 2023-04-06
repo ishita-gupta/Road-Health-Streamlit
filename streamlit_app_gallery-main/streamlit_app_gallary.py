@@ -182,12 +182,12 @@ def main():
         #Add file uploader to allow users to upload photos
         image_file = st.file_uploader("", type=['jpg','png','jpeg'])
         if image_file is not None:
-            with open(os.path.join("static","1.jpg"),"wb") as f: 
+            with open(os.path.join("streamlit_app_gallery-main/static","1.jpg"),"wb") as f: 
                 f.write(image_file.getbuffer())         
             st.success("File Uploaded")
             
             # image = Image.open(uploaded_file)
-            percentage,result=model(glob.glob('static/*.jpg'))
+            percentage,result=model(glob.glob('streamlit_app_gallery-main/static/*.jpg'))
 
             col1, col2 = st.columns( [0.5, 0.5])
             with col1:
@@ -204,7 +204,7 @@ def main():
                     print(zipcode)
                     imframe = Image.open(input_image[0])
                     npframe = np.array(imframe.getdata())
-                    df=pd.read_csv('test.csv')
+                    df=pd.read_csv('streamlit_app_gallery-main/test.csv')
                     print('hhhhhhhhhhhhhhhhhhhhh',df.columns.values)
                     row=[address,zipcode,city,state,percentage,npframe]
                     print(df)
