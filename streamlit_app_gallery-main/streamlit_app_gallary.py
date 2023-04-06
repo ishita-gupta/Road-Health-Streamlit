@@ -180,26 +180,14 @@ def main():
         df = pd.DataFrame(columns=['address','zipcode','city','state','percentage','image'])
                     
         #Add file uploader to allow users to upload photos
-        uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-        if uploaded_file is not None:
-            # Save the uploaded file to a temporary file
-            with open(os.path.join("streamlit_app_gallery-main/static", "temp.jpg"), "wb") as f:
-                f.write(uploaded_file.getbuffer())
-
-            # Display the uploaded image
-            image = Image.open(uploaded_file)
-            st.image(image, caption="Uploaded Image")
-
-            # Run the model on the uploaded image
-            percentage, result = model(glob.glob("streamlit_app_gallery-main/static/*.jpg"))
-
-            st.write("Percentage:", percentage)
-            st.write("Result:", result)
-
-            # Delete the temporary file
-            os.remove(os.path.join("streamlit_app_gallery-main/static", "temp.jpg"))
-
-            st.success("File saved and processed successfully!")
+        image_file = st.file_uploader("", type=['jpg','png','jpeg'])
+        if image_file is not None:
+            with open(os.path.join("static","1.jpg"),"wb") as f: 
+                f.write(image_file.getbuffer())         
+            st.success("File Uploaded")
+            
+            # image = Image.open(uploaded_file)
+            percentage,result=model(glob.glob('static/*.jpg'))
 
             col1, col2 = st.columns( [0.5, 0.5])
             with col1:
