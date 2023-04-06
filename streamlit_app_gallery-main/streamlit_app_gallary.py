@@ -191,7 +191,7 @@ def main():
             st.image(image, caption="Uploaded Image")
 
             # Run the model on the uploaded image
-            percentage, result = model(glob.glob("streamlit_app_gallery-main/static/*.JPG"))
+            percentage, result = model(glob.glob("streamlit_app_gallery-main/static/*.jpg"))
 
             st.write("Percentage:", percentage)
             st.write("Result:", result)
