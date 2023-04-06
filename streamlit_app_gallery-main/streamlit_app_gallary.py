@@ -52,7 +52,7 @@ def model(image):
     # OG size = 300
     size = 300
     model = Sequential()
-    model = load_model('full_model.h5')
+    model = load_model('streamlit_app_gallery-main/full_model.h5')
     
     ## load Testing data : non-pothole 
     nonPotholeTestImages = image
@@ -187,7 +187,7 @@ def main():
             st.success("File Uploaded")
             
             # image = Image.open(uploaded_file)
-            percentage,result=model(glob.glob('static/*.JPG'))
+            percentage,result=model(glob.glob('streamlit_app_gallery-main/static/*.JPG'))
 
             col1, col2 = st.columns( [0.5, 0.5])
             with col1:
