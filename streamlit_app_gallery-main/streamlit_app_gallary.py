@@ -182,7 +182,7 @@ def main():
         #Add file uploader to allow users to upload photos
         image_file = st.file_uploader("", type=['jpg','png','jpeg'])
         if image_file is not None:
-            with open(os.path.join("static","1.jpg"),"wb") as f: 
+            with open(os.path.join("streamlit_app_gallery-main/static","1.jpg"),"wb") as f: 
                 f.write(image_file.getbuffer())         
             st.success("File Uploaded")
             
@@ -192,8 +192,8 @@ def main():
             col1, col2 = st.columns( [0.5, 0.5])
             with col1:
                 st.markdown('<p style="text-align: center;">Image Uploaded</p>',unsafe_allow_html=True)
-                st.image(glob.glob('static/*.JPG'),width=300)
-                input_image = glob.glob('static/*.JPG')
+                st.image(glob.glob('streamlit_app_gallery-main/static/*.JPG'),width=300)
+                input_image = glob.glob('streamlit_app_gallery-main/static/*.JPG')
 
             with col2:
                 st.markdown('<p style="text-align: center;">Pot Hole Detection Results</p>',unsafe_allow_html=True)
