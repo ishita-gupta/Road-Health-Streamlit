@@ -78,7 +78,7 @@ def model(image):
     #y_test.extend(y_test1)
     y_test.extend(y_test2)
     y_test = np.asarray(y_test)
-
+    print('Y-Test',y_test)
     y_test = np_utils.to_categorical(y_test)
 
 
