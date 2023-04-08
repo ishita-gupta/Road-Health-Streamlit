@@ -104,7 +104,7 @@ def send_email(usermail):
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     smtp_username = 'ishitagupta19@gnu.ac.in'
-    smtp_password = 'ddtyoohrsnrcexoh'
+    smtp_password = 'mdoakfbaqrhubwcf'
     file_paths =glob.glob('streamlit_app_gallery-main/dashboard/*.html')
     msg = MIMEMultipart()
     msg['From'] = from_addr
