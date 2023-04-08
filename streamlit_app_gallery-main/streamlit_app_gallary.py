@@ -98,13 +98,13 @@ def model(image):
 def send_email(usermail):
     # Set up email parameters
     to_addr = usermail
-    from_addr = 'ishitagupta19@gnu.ac.in'
+    from_addr = 'ishitagupta2612@gmail.com'
     subject = "Information regarding Potholes in Ahmedabad"
     body = "Please find the below attachment which has information regarding Pot holes in Ahmedabad in the form of Visual Graphics"
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
-    smtp_username = 'ishitagupta19@gnu.ac.in'
-    smtp_password = 'mdoakfbaqrhubwcf'
+    smtp_username = 'ishitagupta2612@gmail.com'
+    smtp_password = 'npuuwkbmoptctooa'
     file_paths =glob.glob('streamlit_app_gallery-main/dashboard/*.html')
     msg = MIMEMultipart()
     msg['From'] = from_addr
