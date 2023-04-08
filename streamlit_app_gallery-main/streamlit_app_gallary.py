@@ -305,7 +305,7 @@ def main():
         if submit_res:
             send_email(usermail)
             # receiver_email = usermail
-            # password = "ddtyoohrsnrcexoh"
+            # password = " "
 
             # message = MIMEMultipart()
             # message["From"] = sender_email
